@@ -1,0 +1,564 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing :border-box;
+}
+
+
+body{
+    background-color:#e3e3e3;
+    height: 100vh;
+}
+
+.interface{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    padding: 0 4%;
+}
+
+header .ai-contato button, .hero-site button, .hoteis button{
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header .ai-contato button:hover, .hero-site button:hover, .hoteis button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ESTILO DO HEADER */
+
+header{
+    width: 100%;
+    padding: 30px 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .6s;
+    z-index: 99999;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    max-width: 80px;
+    color: rgb(233, 231, 231);
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+header .logo #logo-preta{
+    color: rgb(0, 0, 0);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+/* ESTILO DO MENU DINÂMICO */
+
+    header .logo #logo-preta{
+        display: none;
+    }
+
+    header.rolar{
+        background-color: white;
+        padding: 3px 0;
+        box-shadow: 0 0 8px #00000062;
+    }
+
+    header.rolar .menu-desktop nav ul li a{
+        color: black;
+    }
+
+    header.rolar .ai-contato button{
+        border: 1px solid black;
+        color: black;
+    }
+
+    header.rolar .ai-contato button:hover{
+        background-color: black;
+        color: white;
+    }
+
+    header.rolar .logo #logo-branca{
+        display: none;
+    }
+
+    header.rolar .logo #logo-preta{
+        display: block;
+    }
+/* ________________________ */
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.menu-desktop nav a:hover{
+    transform: scale(1.10);
+}
+
+header .ai-contato button{
+    width: 140px;
+    height: 50px;
+}
+
+/* ESTILO DO MENU MOBILE 2.0 */
+
+header .ai-abrir-menu{
+    display: none;
+}
+
+.ai-abrir-menu i{
+    color: white;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: rgb(0, 0, 0);
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden; 
+    transition: .6s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+.menu-mobile .ai-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .ai-fechar i{
+    color: white;
+    font-size: 30px;
+}
+
+
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 10%;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: rgb(150, 150, 150);
+    color: black;
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88889;
+    display: none;
+}
+
+header.rolar .ai-abrir-menu i{
+    color: black;
+}
+    
+
+
+
+/* ESTILO DO HERO */
+
+section.hero-site{
+    height: 100vh;
+    background-image: url(imagens/pink-sky-dark\(1280x750\).png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center ;
+    color: white;
+    
+}
+
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span{
+    display: block;
+    font-weight: 800;
+
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero p span{
+    display: block;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* ESTILO DAS VANTAGENS */
+
+section.vantagens{
+    padding: 80px 0;
+}
+
+.vantagens .itens-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.vantagens .itens-container .img-itens img{
+    max-width: 420px;
+}
+
+.vantagens .itens-container .txt-itens h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.itens-container .txt-itens h3 span{
+    font-weight:300 ;
+}
+
+/* ESTILO DOS BOTÕES DO CONTEÚDO EXTRA */
+
+section.conteudo-extra{
+    background-color: white;
+    padding: 80px 0;
+}
+
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.conteudo-extra .txt-contato h3{
+    font-size: 2.5em;
+    line-height: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.conteudo-extra .txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.conteudo-extra .icons-contato a{
+    text-decoration: none;
+}
+
+.conteudo-extra .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.conteudo-extra .icons-contato button i{
+    font-size: 20px;
+}
+
+.conteudo-extra .icons-contato button p{
+    font-size: 16px;
+}
+
+.conteudo-extra .icons-contato button:hover{
+    background-color: black;
+    color: white;
+}
+
+.conteudo-extra .icons-contato button:hover i, .contato .icons-contato button:hover p{
+    color: white;
+}
+
+/* ESTILO DOS HOTEIS */
+
+section.hoteis{
+    height: 600px;
+    background-image: url(imagens/imagem-nebula-opacidade.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    color: white;
+    text-align: center;
+}
+
+.hoteis > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000b0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hoteis > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+}
+
+.hoteis h3{
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 200;
+}
+
+.hoteis h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.hoteis p{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hoteis button{
+    width: 220px;
+    height: 60px;
+}
+
+/* ESTILO DA SESSÃO COMO FUNCIONA */
+
+section.como-funciona{
+    padding: 80px 0;
+}
+
+.txt-funciona, .instrucoes{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+
+}
+
+.como-funciona .txt-funciona{
+    position: sticky;
+    top: 50%;
+    padding-bottom: 45px;
+}
+
+.como-funciona .txt-funciona h3{
+    font-size: 4em;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.instrucoes .instru-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.instrucoes .instru-box img{
+    max-width: 100px;
+    
+}
+
+.instrucoes .instru-box h4{
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.instrucoes .instru-box h4 span{
+    font-weight: 350;
+}
+
+.instrucoes .instru-box p{
+    line-height: 20px;
+}
+
+/* ESTILO DOS BOTÕES DE CONTATO */
+
+section.contato{
+    background-color: white;
+    padding: 80px 0;
+}
+
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3{
+    font-size: 2.5em;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contato .icons-contato button i{
+    font-size: 20px;
+}
+
+.contato .icons-contato button p{
+    font-size: 16px;
+}
+
+.contato .icons-contato button:hover{
+    background-color: black;
+}
+
+.contato .icons-contato button:hover i, .contato .icons-contato button:hover p{
+    color: white;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .top-footer button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .5s;
+}
+
+footer .top-footer button:hover{
+    background-color: white;
+    color: black;
+}
+
+footer .middle-footer{
+    margin: 20px 0;
+}
+
+footer .middle-footer a{
+    color: white;
+    margin: 0 15px;
+}
+
+footer .bottom-footer{
+
+    border-top: 1px solid white;
+}
+
+footer .bottom-footer p{ 
+    color: white;
+    margin-top: 10px;
+}
+
